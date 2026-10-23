@@ -45,9 +45,9 @@
                height="200"
                style="object-fit: cover;">
           <div class="info">
-            <strong th:text="${animal.name}">Name</strong>
-            <span th:text="${animal.type}">Type</span>
-            <span th:text="${animal.breed}">Breed</span>
+            <strong th:text="${animal.name}">Name</strong> —
+            <span th:text="${animal.type}">Type</span> |
+            <span th:text="${animal.breed}">Breed</span> |
             Age: <span th:text="${animal.age}">0</span>
             <span th:text="${animal.status}"
                   th:class="${animal.status.name() == 'AVAILABLE'} ? 'status-available' : 'status-adopted'">AVAILABLE</span>
@@ -55,38 +55,6 @@
           </div>
         </li>
       </ul>
-    </section>
-    <section aria-label="Add new animal">
-      <h2>Add a new animal</h2>
-      <form action="/animals" method="post">
-
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required placeholder="e.g. Milo">
-
-        <label for="type">Type</label>
-        <select id="type" name="type">
-          <option value="">— choose —</option>
-          <option value="CAT">Cat</option>
-          <option value="DOG">Dog</option>
-          <option value="OTHER">Other</option>
-        </select>
-
-        <label for="breed">Breed</label>
-        <input id="breed" name="breed" type="text" placeholder="e.g. Siamese">
-
-        <label for="age">Age (years)</label>
-        <input id="age" name="age" type="number" min="0" placeholder="e.g. 3">
-
-        <label for="description">Description</label>
-        <textarea id="description" name="description" rows="3"
-                  placeholder="A short description of the animal's personality"></textarea>
-
-         <label for="imageUrl">Image filename</label>
-         <input id="imageUrl" name="imageUrl" type="text"
-           placeholder="luna.jpg">
-
-        <button type="submit">Add animal</button>
-      </form>
     </section>
   </main>
 </body>

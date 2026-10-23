@@ -23,7 +23,7 @@ public record AnimalCreateRequest(
         @Schema(description = "Animal breed", example = "Siamese")
         String breed,
 
-        @Schema(description = "Animal age. 0 means younger then 1 year", example = "2")
+        @Schema(description = "Animal age. 0 means younger than 1 year", example = "2")
         @Min(value = 0, message = "Age cannot be negative")
         Integer age,
 

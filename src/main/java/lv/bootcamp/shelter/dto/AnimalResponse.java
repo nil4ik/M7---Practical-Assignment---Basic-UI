@@ -16,10 +16,10 @@ public record AnimalResponse(
         @Schema(description = "Animal name", example = "Luna")
         String name,
 
-        @Schema(description = "Animal Type", example = "CAT")
+        @Schema(description = "Animal type", example = "CAT")
         AnimalType type,
 
-        @Schema(description = "Animal description", example = "Bengal")
+        @Schema(description = "Animal breed", example = "Bengal")
         String breed,
 
         @Schema(description = "Animal age", example = "2")

@@ -45,7 +45,7 @@ public class AnimalApiController {
 
     @Operation(summary = "Get animal by id")
     @ApiResponse(responseCode = "200", description = "Animal found")
-    @ApiResponse(responseCode = "400", description = "No animal with this id",
+    @ApiResponse(responseCode = "404", description = "No animal with this id",
             content = @Content)
     @GetMapping("/{id}")
     public ResponseEntity<AnimalResponse> findById(
